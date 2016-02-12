@@ -1,8 +1,8 @@
-The `EntityStore` interface provides the basic API for insert/update/delete operations as well querying using the builtin DSL for SQL.
+The [EntityStore](http://requery.github.io/javadoc/io/requery/EntityStore.html) interface provides the basic API for insert/update/delete operations as well querying using the builtin DSL for SQL.
 
 ##EntityDataStore
 
-`EntityDataStore` provides a concrete implementation of `EntityStore` for use with SQL databases. This provides a fundamental blocking API for all basic operations.
+[EntityDataStore](http://requery.github.io/javadoc/io/requery/sql/EntityDataStore.html) provides a concrete implementation of `EntityStore` for use with SQL databases. This provides a fundamental blocking API for all basic operations.
 
 Example of instantiating a EntityDataStore:
 
@@ -30,7 +30,7 @@ In addition to the core SQL `EntityDataStore` implementation there are two provi
 
 `SingleEntityStore` represents all basic operations as Rx [Single](http://reactivex.io/documentation/single.html) classes. A single is like an [Observable](http://reactivex.io/documentation/observable.html) but only returns a single result.
 
-Creating a SingleEntityStore:
+Creating a [SingleEntityStore](http://requery.github.io/javadoc/io/requery/rx/SingleEntityStore.html):
 
 ```java
 SingleEntityStore dataStore = RxSupport.toReactiveStore(new EntityDataStore<Persistable>(configuration));
