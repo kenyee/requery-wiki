@@ -27,4 +27,4 @@ With binding enabled you can automatically update your UI when the underlying da
 
 A typical use of a query `Result` instance is to use it's items to populate a list. For this `QueryRecyclerAdapter` can be used to populate a RecyclerView with query result data.
 
-See the requery-android/example project for more information and a working example.
+See the [requery-android/example](https://github.com/requery/requery/tree/master/requery-android/example) project for more information and a working example.
