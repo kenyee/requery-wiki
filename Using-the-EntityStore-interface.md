@@ -38,7 +38,7 @@ SingleEntityStore dataStore = RxSupport.toReactiveStore(new EntityDataStore<Pers
 
 ##Java 8
 
-For Java 8 a `CompletableEntityStore` class is provided which returns all basic operations as Java 8 `[CompletionStage](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html)` objects.
+For Java 8 a `CompletableEntityStore` class is provided which returns all basic operations as Java 8 [CompletionStage](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html) instances.
 
 Creating a CompletionStageEntityStore:
 
