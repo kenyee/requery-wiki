@@ -4,7 +4,7 @@ The `EntityStore` interface provides the basic API for insert/update/delete oper
 
 `EntityDataStore` provides a concrete implementation of `EntityStore` for use with SQL databases. This provides a fundamental blocking API for all basic operations.
 
-Example of instantiating the EntityDataStore:
+Example of instantiating a EntityDataStore:
 
 ```java
 DataSource dataSource = ...
