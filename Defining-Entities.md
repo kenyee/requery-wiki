@@ -10,11 +10,11 @@ abstract class AbstractPerson {
     int id;
 
     String name;
+    String email;
+    Date birthday;
 
     @OneToMany  
     Set<Phone> phoneNumbers;
-
-    String email;
 }
 ```
 
