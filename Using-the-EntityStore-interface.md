@@ -24,11 +24,11 @@ Configuration configuration = new ConfigurationBuilder(dataSource, model)
 
 #Async wrappers
 
-In addition to `EntityDataStore` there are two supported non-blocking API's for basic operations.
+In addition to the core SQL `EntityDataStore` implementation there are two provided non-blocking wrappers that provide non-blocking access:
 
 ##RxJava
 
-`SingleEntityStore` represents all basic operations as Rx Single classes. A single is like an observable but only returns a single result.
+`SingleEntityStore` represents all basic operations as Rx [Single](http://reactivex.io/documentation/single.html) classes. A single is like an [Observable](http://reactivex.io/documentation/observable.html) but only returns a single result.
 
 Creating a SingleEntityStore:
 
@@ -38,7 +38,7 @@ SingleEntityStore dataStore = RxSupport.toReactiveStore(new EntityDataStore<Pers
 
 ##Java 8
 
-For Java 8 a `CompletableEntityStore` class is provided which returns all basic operations as Java 8 `CompletionStage` objects.
+For Java 8 a `CompletableEntityStore` class is provided which returns all basic operations as Java 8 `[CompletionStage](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html)` objects.
 
 Creating a CompletionStageEntityStore:
 
