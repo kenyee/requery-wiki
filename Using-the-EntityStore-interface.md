@@ -1,6 +1,6 @@
 The `EntityStore` interface provides the basic API for insert/update/delete operations as well querying using the builtin DSL for SQL.
 
-#EntityDataStore
+##EntityDataStore
 
 `EntityDataStore` provides a concrete implementation of `EntityStore` for use with SQL databases. This provides a fundamental blocking API for all basic operations.
 
