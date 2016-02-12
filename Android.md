@@ -4,7 +4,7 @@ Android support is at the core of this project. The requery-android project prov
 
 ###Databinding
 
-You can also take advantage of the new databinding library from Google in your entities. Simply extend Observable and provide @Bindable on bindable properties.
+You can also take advantage of the new databinding library from Google in your entities. Simply extend [Observable](http://developer.android.com/reference/android/databinding/Observable.html) and provide [@Bindable](http://developer.android.com/reference/android/databinding/Bindable.html) on bindable properties.
 
 ```java
 @Entity
