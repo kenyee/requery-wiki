@@ -1,3 +1,5 @@
+### Entities
+
 requery works by using abstract classes or interfaces to define the structure of an entity. These classes should be marked with the `@Entity` annotation. Classes marked with this annotation will have a corresponding Entity class generated for them by the requery annotation processor. This generated class will inherit from the original class, and be used as the proxy class to store the state of the object. This is how requery avoids reflection.
 
 Example:
@@ -41,3 +43,7 @@ public interface Person {
 This will generate a file called `PersonEntity.java` which contains the required attributes and implements the Person interface.
 
 The name of the generated file can be customized by specifying the `name()` property on the `Entity` annotation. Whether to use abstract classes or interfaces is up to the user, requery is not opinionated about how those classes are defined. Use whatever best fits your use case.
+
+### Models
+
+A [EntityModel](http://requery.github.io/javadoc/io/requery/meta/EntityModel.html) is a grouping of `Entity` types belonging to a specific database or schema. A file called Models.java is automatically generated that contains model definitions based on the entity classes you have defined. Use this model to create storage objects for working the model through a database. As described [here](https://github.com/requery/requery/wiki/Using-the-EntityStore-interface).
