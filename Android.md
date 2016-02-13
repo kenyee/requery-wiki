@@ -33,7 +33,7 @@ For async operations we recommend using [RxJava](https://github.com/ReactiveX/Rx
 
 ###ParcelConverter
 
-ParcelConverter is a builtin [Converter](http://requery.github.io/javadoc/io/requery/Converter.html) that allows you to easily store Android's Parcelable objects into a SQLite BLOB column. Simple example of storing an Android Parcelable Location object in an Entity.
+ParcelConverter is a builtin [Converter](http://requery.github.io/javadoc/io/requery/Converter.html) that allows you to easily store Android's Parcelable objects into a SQLite BLOB column. Here's an example of storing an Android Parcelable Location object in an Entity:
 
 First define the converter:
 
@@ -45,7 +45,6 @@ First define the converter:
  }
 ```
 Then apply to it your entity:
-
 ```java
 @Entity
 public interface GeoInfo {
