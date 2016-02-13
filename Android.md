@@ -51,7 +51,7 @@ Then apply to it your entity:
 public interface GeoInfo {
     @Key int getId();
     @Converter(LocationConverter.class)
-    Location getLocation();
+    Location getLocation(); // stored as a SQLite BLOB
 }
 ```
 
