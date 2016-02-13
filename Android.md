@@ -1,6 +1,6 @@
 ##Android
 
-Android support is at the core of this project. The requery-android project provides classes specific to using Android's SQLite database within the requery core library as well as useful UI adapters/classes for working with database entities in an Android application.
+Android support is at the core of this project. The requery-android project provides classes specific to using Android's SQLite database within the requery core library as well as useful UI adapters/classes for working with database entities in an Android application. requery works on Android API level 15 and later.
 
 ###Databinding
 
