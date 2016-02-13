@@ -27,6 +27,10 @@ With binding enabled you can automatically update your UI when the underlying da
 
 A typical use of a query [Result](http://requery.github.io/javadoc/io/requery/query/Result.html) instance is to use it's items to populate a list. For this `QueryRecyclerAdapter` can be used to populate a RecyclerView with query result data.
 
+###Async operations
+
+For async operations we recommend using [RxJava](https://github.com/ReactiveX/RxJava). requery provides a complete API that encapsulates all common database operations (insert/update/delete/refresh) using the Rx [Single](http://reactivex.io/documentation/single.html) API. See [here](https://github.com/requery/requery/wiki/Using-the-EntityStore-interface#rxjava) for more information.
+
 ###Example project
 
 See the [requery-android/example](https://github.com/requery/requery/tree/master/requery-android/example) project for more information and a working example.
