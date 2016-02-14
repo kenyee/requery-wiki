@@ -56,4 +56,4 @@ public interface GeoInfo {
 
 ###Example project
 
-See the [requery-android/example](https://github.com/requery/requery/tree/master/requery-android/example) project for more information and a working example.
+See the [requery-android/example](https://github.com/requery/requery/tree/master/requery-android/example) project for a working example.
