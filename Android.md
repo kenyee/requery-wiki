@@ -2,6 +2,10 @@
 
 Android support is at the core of this project. The requery-android project provides classes specific to using Android's SQLite database within the requery core library as well as useful UI adapters/classes for working with database entities in an Android application. requery works on Android API level 15 and later.
 
+###DatabaseSource
+
+`DatabaseSource` is the Android specific connection source for use with [EntityDataStore](http://requery.github.io/javadoc/io/requery/sql/EntityDataStore.html) which is the core entity management API of requery. `DatabaseSource` extends [SQLiteOpenHelper](http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html) and using the requery API automatically creates tables from the EntityModel provided. It also provides basic upgrade support by adding missing columns and tables on a upgrade. Every time you change the model be sure to increment the schemaVersion passed to `DatabaseSource`. If you need to perform more complex migrations just override onUpgrade and perform the necessary migration steps.
+
 ###Databinding
 
 You can take advantage of the new databinding library from Google in your entities. Simply extend [Observable](http://developer.android.com/reference/android/databinding/Observable.html) and provide [@Bindable](http://developer.android.com/reference/android/databinding/Bindable.html) on bindable properties.
