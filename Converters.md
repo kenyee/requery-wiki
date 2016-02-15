@@ -38,9 +38,12 @@ Next provide the conversion methods:
 That's it. Then you can use the converter class on an entity on the attribute level:
 
 ```java
-interface Person
+interface Person {
+...
     @Convert(URIConverter.class)
     URI getHomePage();
+...
+}
 ```
 
 or you can also override the [Mapping](http://requery.github.io/javadoc/io/requery/sql/Mapping.html) interface and provide this converter as a default for all entities.
