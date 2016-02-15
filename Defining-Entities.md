@@ -47,3 +47,14 @@ The name of the generated file can be customized by specifying the `name()` prop
 ### Models
 
 A [EntityModel](http://requery.github.io/javadoc/io/requery/meta/EntityModel.html) is a grouping of `Entity` types belonging to a specific database or schema. A file called Models.java is automatically generated that contains model definitions based on the entity classes you have defined. Use this model to create storage objects for working the model through a database. As described [here](https://github.com/requery/requery/wiki/Using-the-EntityStore-interface).
+
+### Generated class names
+
+This table illustrates the default class names when using [@Entity](http://requery.github.io/javadoc/io/requery/Entity.html) on your domain classes. You can always specify the desired class name in the annotation. However below are the defaults for hypothetical 'User' entity when this isn't specified.
+
+your class name       |  class type |  generated name
+----------------------|-------------|----------------
+AbstractUser          |  class      |  User    
+BaseUser              |  class      |  User
+User                  |  interface  |  UserEntity      
+IUser                 |  interface  |  User   
