@@ -4,9 +4,10 @@ You can combine requery annotations (and even some JPA annotations) for use with
 
 Limitations to consider:
 
-*Immutable types cannot contain relational links
-*Immutable types must be buildable via a builder class (although this may change in a updated version)
-*Immutable types can only be queried only, they can not be inserted/updated/deleted via `EntityStore` API.
+* Immutable types cannot contain relational links
+* Immutable types must be buildable via a builder class (although this may change in a updated version)
+* Immutable types do not have any state tracking
+* Immutable types can only be queried only, they can not be inserted/updated/deleted via `EntityStore` API.
 
 Example using Google [AutoValue](https://github.com/google/auto)
 
