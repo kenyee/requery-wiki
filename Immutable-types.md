@@ -21,7 +21,6 @@ public abstract class Person implements Serializable {
     public static abstract class Builder {
         public abstract Builder setId(int id);
         public abstract Builder setName(String name);
-        public abstract Builder setEmail(String email);
         public abstract Builder setBirthday(Date date);
         public abstract Builder setAge(int age);
         public abstract Person build();
@@ -46,7 +45,6 @@ Inserting a person:
 data.insert(Person.class)
             .value(PersonEntity.NAME, name)
             .value(PersonEntity.AGE, random.nextInt(50))
-            .value(PersonEntity.EMAIL, name.replaceAll(" ", "").toLowerCase() + "@example.com")
             .value(PersonEntity.BIRTHDAY, calendar.getTime())
             .get().first().get(PersonEntity.ID)
 ```
