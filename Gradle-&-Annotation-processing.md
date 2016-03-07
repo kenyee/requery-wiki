@@ -8,11 +8,11 @@ You can use `provided` scope on an annotation processor dependency in gradle lik
 provided 'io.requery:requery-processor:1.0-SNAPSHOT'
 ```
 
-This works and the processor will run and generated source files. However there are several problems:
+This works and the processor will run and generate source files. However there are problems:
 
-1. In IntelliJ the generated files are not visible to the IDE and appear red, even though the code compiles correctly.
+1. In IntelliJ the generated files are not visible to the IDE and appear red, even though the code compiles.
 
-2. The dependencies of the processor are now put on to your project classpath which is usually not desired.
+2. The dependencies of the processor are now put on to your project classpath which is not desired.
 
 Instead you should use an apt plugin:
 
