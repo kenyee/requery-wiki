@@ -47,4 +47,3 @@ This works and the processor will run and generate source files. However there a
 
 2. The dependencies of the processor are now put on to your project classpath which is not desired.
 
-Instead you should use an apt plugin as described above.
