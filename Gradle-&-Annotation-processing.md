@@ -2,7 +2,7 @@
 
 Annotation processing takes a few steps to setup correctly in gradle.
 
-*Why not use the `provided` scope?*
+**Why not use the `provided` scope?**
 
 You can use `provided` scope on an annotation processor dependency in gradle like so:
 
@@ -16,7 +16,7 @@ This works and the processor will run and generated source files. However there 
 
 Instead you should use an apt plugin:
 
-*Which plugins to use?*
+**Which plugins to use?**
 
 For Android projects use [android-apt](https://bitbucket.org/hvisser/android-apt):
 
