@@ -1,6 +1,6 @@
 Annotation processing takes a few steps to setup correctly in gradle.
 
-**Which plugins to use?**
+**Which plugin to use?**
 
 For Android projects use [android-apt](https://bitbucket.org/hvisser/android-apt):
 
