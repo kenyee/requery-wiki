@@ -1,5 +1,3 @@
-### Annotation processing
-
 Annotation processing takes a few steps to setup correctly in gradle.
 
 **Why not use the `provided` scope?**
