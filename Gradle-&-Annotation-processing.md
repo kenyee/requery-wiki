@@ -31,7 +31,7 @@ buildscript {
 apply plugin: `net.ltgt.apt`
 ```
 
-Note the need for plugins for proper annotation processing may get fixed in a future version of gradle, as described [here](https://github.com/gradle/gradle/blob/master/design-docs/java-annotation-processing.md)
+Note the need for plugins for proper annotation processing may get addressed in a future version of gradle, as described [here](https://github.com/gradle/gradle/blob/master/design-docs/java-annotation-processing.md)
 
 **Why not use the `provided` scope?**
 
