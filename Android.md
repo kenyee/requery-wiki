@@ -6,7 +6,7 @@ Android support is at the core of this project. requery is the most feature comp
 
 `DatabaseSource` is the Android specific connection source for use with [EntityDataStore](http://requery.github.io/javadoc/io/requery/sql/EntityDataStore.html) which is the core entity management API of requery. `DatabaseSource` extends [SQLiteOpenHelper](http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html) and using the requery API automatically creates tables from the EntityModel provided. It also provides basic upgrade support by adding missing columns and tables on a upgrade. Every time you change the model be sure to increment the schemaVersion passed to `DatabaseSource`. If you need to perform more complex migrations just override onUpgrade and perform the necessary migration steps.
 
-###SQLCipher
+###[SQLCipher](https://github.com/sqlcipher/android-database-sqlcipher)
 
 SQLCipher is a popular extension to SQLite that encrypts the entire database. You can use requery with SQLCipher by using `io.requery.android.sqlcipher.SecureDatabaseSource` instead of `DatabaseSource` when creating the store and providing a database password.
 
