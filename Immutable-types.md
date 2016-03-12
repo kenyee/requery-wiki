@@ -4,7 +4,7 @@ You can combine requery annotations (and even some JPA annotations) for use with
 
 Limitations to consider:
 
-* Immutable types cannot contain relational links
+* Immutable types cannot contain relational links (however you can have foreign keys)
 * Immutable types must be buildable via a builder class or static create method
 
 Example using Google [AutoValue](https://github.com/google/auto)
