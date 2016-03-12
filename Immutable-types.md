@@ -1,5 +1,3 @@
-### Immutable types
-
 You can combine requery annotations (and even some JPA annotations) for use with immutable types. However there are some limitations to consider when using immutable types. 
 
 Limitations to consider:
