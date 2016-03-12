@@ -9,18 +9,18 @@ Example using Google [AutoValue](https://github.com/google/auto) defining a mapp
 ```java
 @AutoValue
 @Entity
-public abstract class Person implements Serializable {
+public abstract class Person {
 
     @AutoValue.Builder
-    public static abstract class Builder {
-        public abstract Builder setId(int id);
-        public abstract Builder setName(String name);
-        public abstract Builder setBirthday(Date date);
-        public abstract Builder setAge(int age);
-        public abstract Person build();
+    static abstract class Builder {
+        abstract Builder setId(int id);
+        abstract Builder setName(String name);
+        abstract Builder setBirthday(Date date);
+        abstract Builder setAge(int age);
+        abstract Person build();
     }
 
-    public static Builder builder() {
+    static Builder builder() {
         return new AutoValue_Person.Builder().setId(-1);
     }
 
