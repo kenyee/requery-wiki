@@ -5,9 +5,7 @@ Limitations to consider:
 * Immutable types cannot contain relational links (however you can have foreign keys)
 * Immutable types must be buildable via a builder class or static create method
 
-Example using Google [AutoValue](https://github.com/google/auto)
-
-Defining a person mapping:
+Example using Google [AutoValue](https://github.com/google/auto) defining a mapping:
 
 ```java
 @AutoValue
