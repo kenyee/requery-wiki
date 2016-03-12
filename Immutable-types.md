@@ -2,7 +2,7 @@ You can combine requery annotations (and even some JPA annotations) for use with
 
 * Immutable types cannot contain relational links (however you can have foreign keys)
 * Immutable types cannot have lazy loading or change tracking
-* Immutable types must be buildable via a builder class or static create method
+* Immutable types must have a static create method or be buildable via a builder class
 
 Example using Google [AutoValue](https://github.com/google/auto) defining a mapping:
 
