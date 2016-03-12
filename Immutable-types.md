@@ -32,3 +32,5 @@ public abstract class Person implements Serializable {
     public abstract int getAge();
 }
 ```
+
+The processor will generate a `PersonType` class contain the attributes of `Person` which is used to construct and create instances of `Person` by the library when needed. 
