@@ -1,6 +1,4 @@
-You can combine requery annotations (and even some JPA annotations) for use with immutable types. However there are some limitations to consider when using immutable types. 
-
-Limitations to consider:
+You can combine requery annotations (and even some JPA annotations) for use with immutable types. However there are some limitations to consider when using immutable types:
 
 * Immutable types cannot contain relational links (however you can have foreign keys)
 * Immutable types cannot have lazy loading or change tracking
