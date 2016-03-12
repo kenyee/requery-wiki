@@ -35,19 +35,3 @@ public abstract class Person implements Serializable {
     public abstract int getAge();
 }
 ```
-
-Inserting a person:
-
-```java
-data.insert(Person.class)
-            .value(PersonEntity.NAME, name)
-            .value(PersonEntity.AGE, random.nextInt(50))
-            .value(PersonEntity.BIRTHDAY, calendar.getTime())
-            .get().first().get(PersonEntity.ID)
-```
-
-Retrieving via query:
-
-```java
-Result<Person> result = data.select(Person.class).get();
-```
