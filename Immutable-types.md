@@ -1,12 +1,11 @@
 ### Immutable types
 
-You can combine requery annotations (and even some JPA annotations) for use with immutable types. However there are some limitations to consider when using immutable types. The general workflow for using immutable types is that immutable types are used in selection queries (reading) and insertion/deletion/updates (writing) are done via the SQL DSL only.
+You can combine requery annotations (and even some JPA annotations) for use with immutable types. However there are some limitations to consider when using immutable types. 
 
 Limitations to consider:
 
 * Immutable types cannot contain relational links
 * Immutable types must be buildable via a builder class or static create method
-* Immutable types can only be queried only, they can not be inserted/updated/deleted via `EntityStore` API (this may change based on feedback).
 
 Example using Google [AutoValue](https://github.com/google/auto)
 
