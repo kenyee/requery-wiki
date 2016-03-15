@@ -17,6 +17,9 @@ abstract class AbstractPerson {
 
     @OneToMany  
     Set<Phone> phoneNumbers;
+
+    @Transient
+    String link; // this field is not persisted because of @Transient
 }
 ```
 
