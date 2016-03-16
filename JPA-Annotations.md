@@ -11,6 +11,7 @@ Only a subset of the JPA annotations are supported. These are the annotations th
 - JoinTable
 - ManyToMany
 - ManyToOne
+- MappedSuperclass
 - OneToMany
 - OneToOne
 - PostLoad
@@ -24,6 +25,4 @@ Only a subset of the JPA annotations are supported. These are the annotations th
 - Transient
 - Version
 
-There is no support for embedded types or mapped superclasses. Unique/index constraints must
-be placed on the field/method level. Advanced JPA features are not yet supported such as embedded types, 
-mapping via @JoinTable to secondary tables to define relationships (outside of ManyToMany).
+There is no support for embedded types. Unique/index constraints must be placed on the field/method level. Advanced JPA features are not yet supported such as embedded types, mapping via @JoinTable to secondary tables to define relationships (outside of ManyToMany).
