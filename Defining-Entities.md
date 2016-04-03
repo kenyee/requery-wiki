@@ -55,9 +55,9 @@ A [EntityModel](http://requery.github.io/javadoc/io/requery/meta/EntityModel.htm
 
 This table illustrates the default class names when using [@Entity](http://requery.github.io/javadoc/io/requery/Entity.html) on your domain classes. You can always specify the desired class name in the annotation. However below are the defaults for hypothetical 'User' entity when this isn't specified.
 
-your class name       |  class type |  generated name
-----------------------|-------------|----------------
-AbstractUser          |  class      |  User    
-BaseUser              |  class      |  User
-User                  |  interface  |  UserEntity      
-IUser                 |  interface  |  User   
+your class name       |  object type |  generated name
+----------------------|--------------|----------------
+AbstractUser          |  class       |  User    
+BaseUser              |  class       |  User
+User                  |  interface   |  UserEntity      
+IUser                 |  interface   |  User   
