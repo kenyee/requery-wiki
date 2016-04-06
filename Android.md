@@ -1,5 +1,22 @@
 Android support is at the core of this project. requery is the most feature complete ORM available for Android that is also performant. The requery-android project provides classes specific to using Android's SQLite database within the requery core library as well as useful UI adapters/classes. requery works on Android API level 15 and later.
 
+###Quickstart:
+
+Requirements:
+ - Android Studio 1.5 or later
+ - Java JDK 8
+
+1) Add the apt gradle plug-in to your build as described [here](https://github.com/requery/requery/wiki/Gradle-&-Annotation-processing)
+2) Add the requery dependencies to your app build.gradle file:
+
+```gradle
+dependencies {
+    compile 'io.requery:requery:1.0.0-beta11'
+    compile 'io.requery:requery-android:1.0.0-beta11' // for android
+    apt 'io.requery:requery-processor:1.0.0-beta11'   // use an APT plugin
+}
+```
+
 ###DatabaseSource
 
 `DatabaseSource` is the Android specific connection source for use with [EntityDataStore](http://requery.github.io/javadoc/io/requery/sql/EntityDataStore.html) which is the core entity management API of requery. `DatabaseSource` extends [SQLiteOpenHelper](http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html) and using the requery API automatically creates tables from the EntityModel provided. It also provides basic upgrade support by adding missing columns and tables on a upgrade. Every time you change the model be sure to increment the schemaVersion passed to `DatabaseSource`. If you need to perform more complex migrations just override onUpgrade and perform the necessary migration steps.
