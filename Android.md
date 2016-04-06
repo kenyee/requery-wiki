@@ -6,8 +6,8 @@ Requirements:
  - Android Studio 1.5 or later
  - Java JDK 8
 
-1) Add the apt gradle plug-in to your build as described [here](https://github.com/requery/requery/wiki/Gradle-&-Annotation-processing)
-2) Add the requery dependencies to your app build.gradle file:
+1. Add the apt gradle plug-in to your build as described [here](https://github.com/requery/requery/wiki/Gradle-&-Annotation-processing)
+2. Add the requery dependencies to your app build.gradle file:
 
 ```gradle
 dependencies {
