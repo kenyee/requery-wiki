@@ -1,6 +1,6 @@
 Android support is at the core of this project. requery is the most feature complete ORM available for Android that is also performant. The requery-android project provides classes specific to using Android's SQLite database within the requery core library as well as useful UI adapters/classes. requery works on Android API level 15 and later.
 
-###Quickstart:
+###Quickstart
 
 Requirements:
  - Android Studio 1.5 or later
