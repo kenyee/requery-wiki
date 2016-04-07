@@ -11,11 +11,12 @@ Requirements:
 
 ```gradle
 dependencies {
-    compile 'io.requery:requery:1.0.0-beta11'
-    compile 'io.requery:requery-android:1.0.0-beta11' // for android
-    apt 'io.requery:requery-processor:1.0.0-beta11'   // use an APT plugin
+    compile 'io.requery:requery:<latestVersion>'
+    compile 'io.requery:requery-android:<latestVersion>' // for android
+    apt 'io.requery:requery-processor:<latestVersion>'   // use an APT plugin
 }
 ```
+Replace <latestVersion> with latest released version.
 
 ###DatabaseSource
 
