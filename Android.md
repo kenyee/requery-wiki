@@ -16,7 +16,7 @@ dependencies {
     apt 'io.requery:requery-processor:<latestVersion>'   // use an APT plugin
 }
 ```
-Replace <latestVersion> with latest released version.
+Replace `<latestVersion>` with latest released version.
 
 ###DatabaseSource
 
