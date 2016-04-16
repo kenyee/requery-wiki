@@ -26,6 +26,10 @@ Replace `<latestVersion>` with latest released version.
 
 SQLCipher is a popular extension to SQLite that encrypts the entire database. You can use requery with SQLCipher by using `io.requery.android.sqlcipher.SqlCipherDatabaseSource` instead of `DatabaseSource` when creating the store and providing a database password.
 
+###SQLite support library
+
+See the [project page](https://github.com/requery/sqlite-android) for more information. This is an embedded version of SQLite you can include with your application instead of the default system version. To use it include the SQLite library dependency and use `io.requery.android.sqlitex.SqlitexDatabaseSource` instead of `DatabaseSource` when creating the database store.
+
 ###Databinding
 
 You can take advantage of the new databinding library from Google in your entities. Simply extend [Observable](http://developer.android.com/reference/android/databinding/Observable.html) and provide [@Bindable](http://developer.android.com/reference/android/databinding/Bindable.html) on bindable properties.
