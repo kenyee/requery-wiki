@@ -55,29 +55,6 @@ A typical use of a query [Result](http://requery.github.io/javadoc/io/requery/qu
 
 For async operations we recommend using [RxJava](https://github.com/ReactiveX/RxJava). requery provides a complete API that encapsulates all common database operations (insert/update/delete/refresh) using the Rx [Single](http://reactivex.io/documentation/single.html) API. See [here](https://github.com/requery/requery/wiki/Using-the-EntityStore-interface#rxjava) for more information.
 
-###ParcelConverter
-
-ParcelConverter is a builtin [Converter](http://requery.github.io/javadoc/io/requery/Converter.html) that allows you to easily store Android's Parcelable objects into a SQLite BLOB column. Here's an example of storing an Android Parcelable Location object in an Entity:
-
-First define the converter:
-
-```java
- public class LocationConverter<Location> extends ParcelConverter<Location> {
-     public LocationConverter() {
-         super(Location.class, Location.CREATOR);
-     }
- }
-```
-Then apply to it your entity:
-```java
-@Entity
-public interface GeoInfo {
-    @Key int getId();
-    @Converter(LocationConverter.class)
-    Location getLocation(); // stored as a SQLite BLOB
-}
-```
-
 ###Example project
 
 See the [requery-android/example](https://github.com/requery/requery/tree/master/requery-android/example) project for a working example.
