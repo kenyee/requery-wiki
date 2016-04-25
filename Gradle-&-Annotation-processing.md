@@ -31,6 +31,25 @@ buildscript {
 apply plugin: `net.ltgt.apt`
 ```
 
+For Kotlin projects use kapt and be sure to set `generateStubs` to true:
+
+```gradle
+buildscript {
+    ext.kotlin_version = '1.0.1-2'
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+apply plugin: "kotlin"
+kapt {
+    generateStubs = true
+}
+dependencies {
+...
+    kapt 'io.requery:requery-processor:<version>'
+}
+```
+
 Note the need for plugins for proper annotation processing may get addressed in a future version of gradle, as described [here](https://github.com/gradle/gradle/blob/master/design-docs/java-annotation-processing.md)
 
 **Why not use the `provided` scope?**
