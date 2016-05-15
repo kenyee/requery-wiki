@@ -34,7 +34,7 @@ public class AbstractPhone implements Serializable {
 }
 ```
 
-This is a very small set of examples of some basic queries that could be performed on the above:
+This is a very small set of examples of some basic queries that could be performed on the above: Note that depending on the query type the following types of data can be returned 1) a row count result (integer) 2) A entity object e.g. Person 3) A `Tuple` which is a result row with values readable by index or key.
 
 Counting the number of people entries in the table:
 
@@ -46,6 +46,12 @@ Counting people with a given name:
 
 ```java
 int count = data.count(Person.class).where(Person.NAME.eq("Bob Jones")).get().value()
+```
+
+Finding a unique set of names for all people:
+
+```java
+data.select(Person.NAME).distinct().get()
 ```
 
 Finding people over a certain age:
