@@ -7,8 +7,8 @@ You can combine requery annotations (and even JPA annotations) for use with immu
 Example using Google [AutoValue](https://github.com/google/auto) defining a mapping:
 
 ```java
-@AutoValue
 @Entity
+@AutoValue
 public abstract class Person {
 
     @AutoValue.Builder
@@ -24,7 +24,7 @@ public abstract class Person {
         return new AutoValue_Person.Builder().setId(-1);
     }
 
-    @Id @GeneratedValue
+    @Key @Generated
     public abstract int getId();
 
     public abstract String getName();
@@ -34,3 +34,24 @@ public abstract class Person {
 ```
 
 The processor will generate a `PersonType` class contain the attributes of `Person` which is used to construct and create instances of `Person` by the library when needed. 
+
+Example of an entity with a foreign key reference to the previously defined `Person` type:
+
+```java
+@Entity
+@AutoValue
+public abstract class Phone {
+
+    public static Phone create(int id, String phoneNumber, boolean normalized, int ownerId) {
+        return new AutoValue_Phone(id, phoneNumber, normalized, ownerId);
+    }
+
+    @Key @Generated
+    public abstract int getId();
+    public abstract String getPhoneNumber();
+    public abstract boolean isNormalized();
+
+    @ForeignKey(references = Person.class)
+    public abstract int getOwnerId();
+}
+```
