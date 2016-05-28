@@ -3,6 +3,8 @@ Only a subset of the JPA annotations are supported. These are the annotations th
 - Basic
 - Cacheable
 - Column
+- Embeddable
+- Embedded
 - Entity
 - Enumerated
 - GeneratedValue
