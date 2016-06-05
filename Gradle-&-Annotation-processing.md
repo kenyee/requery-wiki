@@ -6,6 +6,9 @@ For Android projects use [android-apt](https://bitbucket.org/hvisser/android-apt
 
 ```gradle
 buildscript {
+    repositories {
+        jcenter()
+    }
     dependencies {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
