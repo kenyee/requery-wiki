@@ -39,7 +39,6 @@ You can take advantage of the new databinding library from Google in your entiti
 
 ```java
 @Entity
-@BindingResource(Binding.BR_CLASS) // requery annotation
 public interface Person extends Observable, Parcelable, Persistable {
 
     @Key @Generated
@@ -49,8 +48,6 @@ public interface Person extends Observable, Parcelable, Persistable {
     String getName();
 ...
 ```
-
-Note here the @BindingResource is used to provide the class name of the generated BR class. The BR class is needed to generate change notifications. Unfortunately this class is not automatically discoverable by the library so it must be specified.
 
 With binding enabled you can automatically update your UI when the underlying database entity is changed or updated.
 
