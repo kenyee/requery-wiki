@@ -33,7 +33,7 @@ interface Person : Persistable {
     @get:OneToOne
     var address: Address
 
-    @get:ManyToMany(mappedBy = "members")
+    @get:ManyToMany
     val groups: Set<Group>
 
     var about: String
