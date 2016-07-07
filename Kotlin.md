@@ -6,7 +6,7 @@ To use these features use `KotlinEntityDataStore` instead of `EntityDataStore`.
 ###Query example:
 ```kotlin
 val configuration = KotlinConfiguration(dataSource = dataSource, model = Models.DEFAULT)
-instance = KotlinEntityDataStore(configuration)
+val data = KotlinEntityDataStore(configuration)
 data.invoke {
     val result = select(Person::class) where (Person::name eq "Bob") limit 5
     val first = result().first()
