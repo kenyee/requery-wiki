@@ -48,7 +48,8 @@ interface Person : Persistable {
     var homepage: URL
 }
 ```
-Queries:
+
+###Queries:
 ```
 val configuration = KotlinConfiguration(dataSource = dataSource, model = Models.DEFAULT)
 instance = KotlinEntityDataStore(configuration)
