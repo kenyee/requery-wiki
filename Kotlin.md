@@ -16,7 +16,7 @@ data.invoke {
 ###Entities
 
 In Kotlin entity definitions can be created from interface classes with properties or from immutable data classes.
-Example: (note the get prefix on annotations, note the `Persistable` is required to use property references)
+Example: (note the get prefix on annotations, note the `Persistable` marker interface is required to use property references in queries)
 ```kotlin
 @Entity
 interface Person : Persistable {
