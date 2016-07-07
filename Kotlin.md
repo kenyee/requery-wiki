@@ -50,7 +50,7 @@ interface Person : Persistable {
 ```
 
 ###Queries:
-```
+```kotlin
 val configuration = KotlinConfiguration(dataSource = dataSource, model = Models.DEFAULT)
 instance = KotlinEntityDataStore(configuration)
 data.invoke {
