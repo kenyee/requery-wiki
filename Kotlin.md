@@ -3,10 +3,13 @@ The kotlin module provides an alternate query and storage interface that takes a
 
 To use these features use `KotlinEntityDataStore` instead of `EntityDataStore`. 
 
-###Query:
 ```kotlin
 val configuration = KotlinConfiguration(dataSource = dataSource, model = Models.DEFAULT)
 val data = KotlinEntityDataStore(configuration)
+```
+
+###Query:
+```kotlin
 data.invoke {
     val result = select(Person::class) where (Person::name eq "Bob") limit 5
     val first = result().first()
