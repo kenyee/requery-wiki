@@ -3,7 +3,7 @@ The kotlin module provides an alternate query and storage interface that takes a
 
 To use these features use `KotlinEntityDataStore` instead of `EntityDataStore`. 
 
-###Query example:
+###Query:
 ```kotlin
 val configuration = KotlinConfiguration(dataSource = dataSource, model = Models.DEFAULT)
 val data = KotlinEntityDataStore(configuration)
