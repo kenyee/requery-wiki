@@ -17,14 +17,14 @@ In an SQL database, you need a many to many table to map one set of objects to a
 ```java
     @JunctionTable(name="ContactAddress", columns = {
             @Column(name = "contactId", foreignKey =
-            @ForeignKey(references = ContactEntity.class, referencedColumn = "cid")),
+            @ForeignKey(references = Contact.class, referencedColumn = "cid")),
             @Column(name = "addressId", foreignKey =
-            @ForeignKey(references = AddressEntity.class, referencedColumn = "aid")) })
+            @ForeignKey(references = Address.class, referencedColumn = "aid")) })
     @ManyToMany
     Set<Address> getAddresses();
 ```
 
-The example above would be used if your mapping table is named "ContactAddress" and has two columns named "contactId" and "addressId".  These columns are foreign keys for the respective tables where the columns are also named "cid" and "aId", respectively.
+The example above would be used if your mapping table is named "ContactAddress" and has two columns named "contactId" and "addressId".  These columns are foreign keys for the respective tables where the columns are also named "cid" and "aId", respectively.  It's important that you don't reference the Requery generated *Entity.classes as well.
 
 ### View vs. Detail Entities
 You commonly would want to minimize the number of fields pulled into your entity objects when displaying data in a view.  Display of the entity in a detail view would included more fields.  You can do this by declaring multiple entities that reference the same table but the entities will have different names (e.g., ContactView and Contact).
